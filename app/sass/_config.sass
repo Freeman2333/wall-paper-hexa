@@ -1,0 +1,65 @@
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+
+// USER VARIABLES SECTION
+
+$accent: orange // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #000 // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$roboto: Roboto, sans-serif // Roboto Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+
+
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		font-display: swap
+		src: local($fname), url($furl) format('woff2')
+
+
+@include font('proxima', normal, 400, '../fonts/ProximaNova-Regular.woff')
+@include font('proxima', normal, 700, '../fonts/ProximaNova-Bold.woff')
+@include font('Intro', normal, 800, '../fonts/Intro-Black.woff')
+@include font('intro', italic, 800, '../fonts/Intro-Black-Italic.woff')
+
+
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: proxima, sans-serif
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 1.3
+	overflow-x: hidden
+	color: $textcolor
+
+

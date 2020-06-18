@@ -1,0 +1,381 @@
+@import config
+@import '../libs/_slick.css'
+
+// CUSTOM USER STYLES & IMPORTS
+
+.container
+	width: 97%
+	max-width: 1141px
+	margin: 0 auto
+
+.btn
+	height: 30px
+	line-height: 30px
+	display: inline-block
+	padding: 0 10px
+	color: white
+	border-radius: 4px
+	transition: .3s ease
+	text-transform: none
+	font-weight: 700
+	background: linear-gradient( to top, #ff4f58, #fd7048) 
+	&:hover
+		color: white
+		text-decoration: none
+		background: linear-gradient( to bottom, #ff4f58, #fd7048) 
+
+	&.btn-lg
+		height: 45px
+		text-transform: uppercase
+		z-index: 22
+		font-size: 23px
+		line-height: 45px
+		padding: 0 15px
+		border: 2px solid #fff
+  
+
+
+// header
+
+.header
+	padding: 10px 0
+	.container
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+		text-transform: uppercase
+
+.logo
+	display: flex
+	align-items: center
+	&:hover
+		text-decoration: none
+.logo-img
+	margin-right: 30px
+
+.logo-info
+	max-width: 200px
+	font-size: 13px
+	white-space: wrap
+	color: $textcolor
+	line-height: 1.1
+	display: inline-block
+
+
+.phones
+	display: flex 
+	align-items: start
+
+
+.header-phone
+	font-weight: 700
+	font-size: 35px
+	line-height: 1
+	margin-right: 15px
+	color: $textcolor
+	&:hover
+		text-decoration: none
+
+// banner
+
+.banner-section
+	position: relative
+	width: 100%
+
+
+.banner-top
+	position: absolute
+	width: 100%
+	z-index: 22
+	top: 0
+	background: rgba(black, 0.6)
+
+.banner-content
+	height: 100%
+
+.nav-list
+	list-style-type: none
+	padding: 7px 0
+	text-transform: uppercase
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	margin-bottom: 0
+
+.nav-item
+	padding: 0 60px
+	position: relative
+	&.active
+		font-weight: 700
+	&:after
+		content: ''
+		position: absolute
+		display: block
+		width: 1px
+		height: 17px
+		background: white
+		right: 0
+		top: 0
+	&:last-child
+		&:after 
+			display: none
+
+.nav-link
+	color: white
+	font-size: 14px
+	transition: .3s ease
+	&:hover
+		color: #fd7048
+		text-decoration: none
+
+
+// banner
+
+.slider
+	position: relative
+
+.slider-item
+	position: relative
+	z-index: 1
+	overflow: hidden
+	padding-bottom: 440px
+	.container
+		padding-top: 70px
+	&:before
+		content: ""
+		display: inline-block
+		z-index: -1
+		position: absolute
+		left: -120px
+		top: 0
+		height: 100%
+		width: 42%
+		background-color: rgba(0, 0, 0, 0.4)
+		-webkit-transform: skewX(-16deg)
+		transform: skewX(-16deg)
+
+.slider-item-1
+	background: url('../images/banner1.jpg')
+	background-size: cover
+
+.slider-item-2
+	background: url('../images/banner-2.jpg')
+	background-size: cover
+
+.slider-item-3
+	background: url('../images/banner-3.jpg')
+	background-size: cover
+
+.slider-item-4
+	background: url('../images/banner-4.jpg')
+	background-size: cover
+
+.slider-item-5
+	background: url('../images/banner-5.jpg')
+	background-size: cover
+
+.slider-item-6
+	background: url('../images/banner-6.jpg')
+	background-size: cover
+
+.slider-titles
+	position: relative
+	margin-bottom: 20px
+	&:before 
+		position: absolute
+		left: 0
+		content: ''
+		display: block
+		height: 103%
+		width: 3px
+		background: white
+		transform: skewX(-16deg)
+		left: -25px
+
+.main-title
+	text-transform: uppercase
+	display: inline-block
+	line-height: 1
+	font-weight: 800
+	font-size: 90px
+	font-family: Intro, sans-serif
+	margin-bottom: 10px
+	padding: 10px 20px
+	position: relative
+	z-index: 22
+	&:before
+		content: ""
+		background-color: rgba(255, 255, 255, 0.7)
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		width: 100%
+		height: 100%
+		transform: skewX(-16deg)
+
+.slider-subtitles
+	display: flex
+	align-items: flex-end
+
+.slider-subtitle__span
+	font-size: 36px
+	font-style: italic
+	font-weight: 700
+	z-index: 22
+	font-family: 'Intro';
+	padding: 8px 28px 4px
+	display: inline-block
+	line-height: 1
+	margin-left: 0
+	margin-right: 5px
+	border-bottom: 3px solid #000
+	text-align: center
+
+.slider-subtitle
+	position: relative
+	display: inline-block
+	margin-right: 50px
+	z-index: 22
+	&:before 
+		content: ""
+		position: relative
+		background-color: rgba(255, 255, 255, 0.7)
+		transform: skewX(-16deg)
+		position: absolute
+		top: 0
+		left: -12%
+		z-index: -1
+		width: 130%
+		height: 63px
+
+.slider-subtitle__number
+	font-family: 'Intro'
+	line-height: 1
+	z-index: 22
+	color: #ffffff
+	position: relative
+	font-size: 45px
+	margin-bottom: 0
+	display: inline-block
+	padding: 4px 18px 4px 8px
+	&:before
+		content: ""
+		background: -webkit-gradient(linear, left top, right top, from(#22d422), to(#037d03))
+		background: linear-gradient(to right, #22d422, #037d03)
+		-webkit-transform: skewX(-16deg)
+		transform: skewX(-16deg)
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		width: 100%
+		height: 100%
+
+.slider-subtitle__small
+	font-size: 16px
+	&:first-child
+		margin-right: 8px
+	&:last-child
+		margin-left: 8px
+
+.slider-text
+	color: white
+	text-transform: uppercase
+	font-size: 19px
+	z-index: 22
+	font-weight: 700
+	margin-bottom: 20px
+
+.slider-controls
+	position: absolute
+	left: calc( 50% - 570px)
+	top: 425px
+	z-index: 22
+	display: flex
+	justify-content: space-between
+
+.slider-nav
+	width: 27px
+	height: 40px
+	background-size: cover
+	cursor: pointer
+	background: url('../images/arrow.png')
+
+.slider-nav__prev
+	transform: rotate(180deg)
+
+.slider-dots
+	display: flex
+	align-items: center
+
+.slick-dots
+	display: flex
+	justify-content: space-between
+	margin-bottom: 0
+	padding-left: 0
+	list-style-type: none
+	margin: 0 35px
+
+.slider__dot
+	width: 14px
+	cursor: pointer
+	height: 14px
+	border-radius: 50%
+	border: 2px solid #fff
+	margin: 0 5px
+
+.slick-active
+	.slider__dot
+		display: flex
+		&:before 
+			content: ''
+			margin: 0 auto
+			margin-top: 1px
+			height: 8px
+			border-radius: 50%
+			width: 8px
+			display: inline-block
+			background: white
+
+// banner-bottom
+
+.banner-footer
+	padding: 13px 0
+	z-index: 222	
+	position: absolute	
+	bottom: 0	
+	width: 100%	
+	text-align: center
+	background: rgba(white, .8)
+	.container 
+		display: flex 
+		flex-wrap: wrap
+		justify-content: space-between
+
+.advantage
+	display: flex
+	flex-direction: column
+	align-items: center
+	max-width: 264px	
+	margin-right: 15px	
+	&:last-child
+		margin-right: 0	
+
+.advantage-img
+	margin-bottom: 15px
+
+.advantage-title
+	font-size: 22px
+	font-weight: 700
+	margin-bottom: 15px
+
+.advantage-text
+	margin-bottom: 0
+
+
+
+
+
+@import media
